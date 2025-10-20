@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="btn">Stop</button>
+    <script>
+        // setTimeout 
+    //    let timeoutId = setTimeout( myFun , 5000);
+
+    //    console.log(timeoutId );
+       
+
+    //     function myFun (){
+    //         alert("Hello Sir..");
+    //     }
+
+    //     clearTimeout(timeoutId);
+
+        // setInterval 
+            let btn = document.getElementById('btn');
+            let start = document.getElementById('start');
+            let  myInterval ;
+
+            start.addEventListener('click', function(){
+             myInterval =    setInterval(() => {
+                   console.log(`hello...`);
+                   
+               }, 1000);
+            });
+
+            btn.addEventListener('click' , function(){
+                clearInterval(myInterval);
+            });
+    </script>
+</body>
+</html>

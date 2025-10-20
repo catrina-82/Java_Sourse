@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      #box{
+        width: 200px;
+        height: 200px;
+        background-color: cadetblue;
+        position: absolute;
+        top: 200px;
+        left: 500px;
+      }
+    </style>
+  </head>
+  <body>
+     <div id="box">
+
+     </div>
+    <script>
+
+      let box = document.getElementById('box');
+
+      // box.addEventListener('click' , function(){
+      //   alert("click event clicked");
+      // });
+
+      // box.addEventListener('mouseover' , function(){
+      //   alert("MouseOver Event Clicked");
+      // });
+
+      // box.addEventListener('mouseout', function(){
+      //   alert("MouseOut Event Clicked");
+      // });
+
+      box.addEventListener('contextmenu' , function (){
+        alert("Right Event Clicked")
+      });
+
+      box.addEventListener('dblclick' , function(){
+        alert("Double Event clicked");
+      });
+
+      // box.addEventListener('mousedown' , function(){
+      //   alert("MouseDown Event Clicked");
+      // });
+
+      box.addEventListener('mouseup' , function(){
+        alert("mouseUp Event Clicked");
+      });
+
+      
+    </script>
+  </body>
+</html>

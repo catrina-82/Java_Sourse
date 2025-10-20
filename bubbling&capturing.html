@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 200px;
+        background-color: beige;
+      }
+      #myDiv {
+        padding: 100px;
+        background-color: cadetblue;
+      }
+      #btn {
+        padding: 20px;
+        position: relative;
+        left: 350px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDiv">
+      <button id="btn">Click Me</button>
+    </div>
+    <script>
+        let btn = document.getElementById("btn");
+      let div = document.getElementById("myDiv");
+
+      // Bubbing Event
+
+      btn.addEventListener("click", function (evt) {
+        console.log(`Button Clicked..`);
+        evt.stopPropagation();
+      });
+
+      div.addEventListener("click", function (evt) {
+        console.log(`Div Clicked...`);
+        evt.stopPropagation();
+
+      });
+
+      document.body.addEventListener('click' , function(){
+          console.log(`Body Clicked...`);
+          
+      });
+
+      // Capturing Event 
+
+    //   btn.addEventListener('click' , function(evt){
+    //       console.log(`Button Clicked..`);
+          
+    //   }, true);
+
+    //   div.addEventListener('click' , function(){
+    //       console.log(`Div Clicked..`);
+          
+    //   }, true);
+
+    //   document.body.addEventListener('click' , function(){
+    //       console.log(`Body Clicked..`);
+          
+    //   },true);
+    </script>
+  </body>
+</html>
